@@ -1,5 +1,10 @@
 body {
   font-family: "Raleway", serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 section {
@@ -8,11 +13,6 @@ section {
 
 .container {
   max-width: 1680px;
-}
-
-.container-fluid {
-  margin-left: -15px;
-  margin-right: -15px;
 }
 
 .heading {
@@ -108,6 +108,9 @@ main.wrapper {
   background-repeat: no-repeat;
   background-position: right bottom;
 }
+.about .col-md-6 {
+  padding-left: 0;
+}
 .about .heading {
   padding-bottom: 30px;
 }
@@ -117,4 +120,285 @@ main.wrapper {
 .about .about-content {
   padding: 0px 120px;
   text-align: justify;
+}
+
+.gallery {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+  background-image: url(/assets/images/gallery-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+.gallery .heading {
+  padding-bottom: 30px;
+}
+.gallery .container {
+  width: 1250px;
+  margin: 0 auto;
+  max-width: 80%;
+}
+.gallery .slick-list {
+  padding-top: 8% !important;
+  padding-bottom: 8% !important;
+  padding-left: 20% !important;
+  padding-right: 20% !important;
+}
+.gallery .slick-dots {
+  text-align: center;
+}
+.gallery .slick-dots li {
+  background: #0059B2;
+  opacity: 0.3;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 0 8px;
+}
+.gallery .slick-dots li.slick-active {
+  background-color: #0059B2;
+  width: 13px;
+  height: 13px;
+  opacity: 1;
+}
+.gallery .slick-track {
+  max-width: 100% !important;
+  transform: translate3d(0, 0, 0) !important;
+  perspective: 100px;
+}
+.gallery .slick-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  width: 100% !important;
+  transform: translate3d(0, 0, 0);
+  transition: transform 1s, opacity 1s;
+}
+.gallery .slick-snext,
+.gallery .slick-sprev {
+  display: block;
+}
+.gallery .slick-current {
+  opacity: 1;
+  position: relative;
+  display: block;
+  transform: translate3d(0, 0, 20px);
+  z-index: 2;
+}
+.gallery .slick-snext {
+  opacity: 1;
+  transform: translate3d(30%, 0, 0px);
+  z-index: 1;
+}
+.gallery .slick-sprev {
+  opacity: 1;
+  transform: translate3d(-30%, 0, 0px);
+}
+.gallery .slick-arrow {
+  width: 12px;
+  z-index: 10;
+  cursor: pointer;
+}
+.gallery .slick-arrow.prev {
+  position: absolute;
+  bottom: -22px;
+  left: 40%;
+}
+.gallery .slick-arrow.next {
+  position: absolute;
+  bottom: -22px;
+  right: 40%;
+}
+
+.categories {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.categories .container {
+  max-width: 1500px;
+}
+.categories .cat-box {
+  max-width: 640px;
+  margin: 30px auto 0 auto;
+  padding: 24px 24px 8px 24px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.categories .cat-box h3 {
+  text-align: center;
+  padding-top: 15px;
+}
+.categories .cat-box h4 {
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.categories .cat-box ul li {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #0059B2;
+  font-family: "Work Sans", serif;
+}
+
+.facilities {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(/assets/images/fs-bg.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+.facilities .col-md-7 {
+  padding-right: 0;
+}
+.facilities .fas-content {
+  padding: 10px 120px;
+}
+.facilities .fas-content h2 {
+  padding-bottom: 30px;
+}
+.facilities .fas-content ul {
+  padding-bottom: 30px;
+}
+.facilities .fas-content ul li {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #0059B2;
+  font-family: "Work Sans", serif;
+}
+
+.location {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(/assets/images/Map-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.location .container {
+  max-width: 1500px;
+}
+.location .right-contact {
+  border: 1px solid #103A6A;
+  padding: 45px;
+  margin-left: 100px;
+}
+.location .right-contact .loc-item {
+  display: flex;
+  gap: 20px;
+  justify-items: flex-start;
+  margin-top: 27px;
+}
+.location .right-contact .loc-item h5 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #103A6A;
+}
+.location .right-contact .loc-item p,
+.location .right-contact .loc-item a {
+  font-size: 18px;
+  line-height: 27px;
+  color: #0059B2;
+  text-decoration: none;
+  font-family: "Work Sans", serif;
+}
+
+.contacts {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.contacts .para {
+  font-size: 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.contacts .contact-form {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.contacts .contact-form label {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #103A6A;
+  font-weight: 400;
+  font-family: "Work Sans", serif;
+}
+.contacts .contact-form .mb-4 {
+  margin-bottom: 2rem !important;
+}
+.contacts .contact-form .form-control,
+.contacts .contact-form .form-select {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #103A6A;
+  outline: none;
+  box-shadow: none;
+  color: #103A6A;
+  font-weight: 600;
+  min-height: 44px;
+}
+
+.footer {
+  border-top: 1px solid #103A6A;
+  padding-top: 10px;
+}
+.footer ul li {
+  list-style-type: none;
+}
+.footer ul li a {
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #0059B2;
+  font-family: "Work Sans", serif;
+  text-decoration: none;
+}
+.footer ul li a:hover {
+  color: #103A6A;
+  font-weight: 500;
+}
+.footer .bottom {
+  border-top: 1px solid #103A6A;
+}
+.footer .bottom .para {
+  font-size: 14px;
+  margin: 0;
+  padding: 10px 0;
+}
+.footer .bottom .para a {
+  text-decoration: none;
+  color: #0059B2;
+}
+.footer .bottom .para a:hover {
+  font-weight: 500;
+  color: #103A6A;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide-in 0.6s ease forwards;
+}
+
+/* Slide-in animation */
+@keyframes slide-in {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
