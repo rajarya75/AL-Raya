@@ -62,6 +62,7 @@ section {
 main.wrapper {
     max-width: 2200px;
     margin: 0 auto;
+    position: relative;
 }
 
 // Start Navbar
@@ -254,13 +255,15 @@ main.wrapper {
         &.prev {
             position: absolute;
             bottom: -22px;
-            left: 40%;
+            left: 39%;
+            opacity: .5;
         }
 
         &.next {
             position: absolute;
             bottom: -22px;
-            right: 40%;
+            right: 39%;
+            opacity: .5;
         }
     }
 
@@ -425,6 +428,7 @@ main.wrapper {
 .footer {
     border-top: 1px solid $primary;
     padding-top: 10px;
+    width: 100%;
 
     ul {
         li {
@@ -468,7 +472,6 @@ main.wrapper {
 }
 
 
-
 .page {
     position: absolute;
     top: 0;
@@ -477,6 +480,7 @@ main.wrapper {
     height: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     animation: slide-in 0.6s ease forwards;
 }
@@ -489,5 +493,67 @@ main.wrapper {
 
     to {
         left: 0;
+    }
+}
+
+// Privacy pages
+.only-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.privacy {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    width: 100%;
+
+    h1 {
+        padding-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 26px;
+        color: $primaryLight;
+        margin-top: 30px;
+        letter-spacing: 1px;
+    }
+
+    .para {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 6px;
+    }
+
+    ul {
+        li {
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
+            color: $primaryLight;
+            font-family: "Work Sans", serif;
+        }
+
+        &.list-number {
+            list-style-type: nu;
+        }
+    }
+}
+
+.thank-you {
+    padding-top: 140px;
+    padding-bottom: 80px;
+    width: 100%;
+    background-image: url(/assets/images/bg.webp);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
+    .thx-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 86vh;
     }
 }
