@@ -557,3 +557,48 @@ main.wrapper {
         height: 86vh;
     }
 }
+
+@media(max-width: 1680px) {
+    .heading {
+        font-size: 42px;
+    }
+
+    .para {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+@media(max-width: 1440px) {
+    .banner .banner-content h1 {
+        font-size: 60px;
+    }
+
+    .heading {
+        font-size: 36px;
+    }
+
+    .para {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .about .about-content {
+        padding: 0 30px;
+    }
+
+    ul {
+        li {
+            font-size: 16px !important;
+            line-height: 24px !important;
+        }
+    }
+
+    .location .right-contact {
+        margin-left: 30px;
+    }
+
+    .contacts .para {
+        font-size: 20px;
+    }
+}
